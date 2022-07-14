@@ -9,7 +9,7 @@ formulario.addEventListener('submit', function(e){
 
 
 
-Swal.fire({
+/*Swal.fire({
     title: 'Suscribite al Newsletter!',
     text: 'No te pierdas de las novedades y descuentos.',
     imageUrl: './img/backNews.jpg',

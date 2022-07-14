@@ -1,0 +1,54 @@
+[
+    {
+        "img": "./img/BoC-camaro.jpg",
+        "nombre":"SOFA CAMARO",
+        "precio": "390000"
+    },
+
+    {
+        "img": "./img/BoC-SOF-AMSTERDAM.jpg",
+        "nombre":"SOFA AMSTERDAM",
+        "precio": "289000"
+    },
+    {
+        "img": "./img/BoC-SOF-MODENA.jpg",
+        "nombre":"SOFA MODENA",
+        "precio": "390000"
+    },
+
+    {
+        "img": "./img/BoC-but-1.jpg",
+        "nombre":"BUTACA FUSION",
+        "precio": "146000"
+    },
+
+    {
+        "img": "./img/porto-azul.jpg",
+        "nombre":"BUTACA PORTO",
+        "precio": "180000"
+    },
+
+    {
+        "img": "./img/BoC-but-3.jpg",
+        "nombre":"BUTACA IMOLA",
+        "precio": "235000"
+    } ,
+    
+    {
+        "img": "./img/BoC-but-3.jpg",
+        "nombre":"BUTACA IMOLA",
+        "precio": "235000"
+    } ,
+    {
+        "img": "./img/BoC-but-3.jpg",
+        "nombre":"BUTACA IMOLA",
+        "precio": "235000"
+    }
+
+
+]
+
+
+
+
+

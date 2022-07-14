@@ -15,6 +15,8 @@
    
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
    
+    <script src="script.js"></script>
+    <script defer src="contactForm.js"></script>
     <script defer src="newsletter.js"></script>
     <script defer src="stock.js"></script>
     <script defer src="modals.js"></script>
@@ -29,29 +31,65 @@
     </header>
 
     <div class="newsletter">
-        <h3>SUSCRIBITE PARA SABER SOBRE NUEVOS INGRESOS Y DESCUENTOS</h3>
-        <h4>No te pierdas las tendencias sobre mobiliario y decoración para tu espacio!</h4>
+        <h2>SUSCRIBITE PARA SABER SOBRE NUEVOS INGRESOS Y DESCUENTOS</h2>
+        <h4>NO TE PIERDAS LAS TENDENCIAS SOBRE MOBILIARIO Y DECORACIÓN!!!</h4>
         <form action="" id="form">
             <input type="email" id="email-form" placeholder="Ingresa tu email">
-           
             <button type= "button" id="submit"  class=" btn btn-primary">SUSCRIBIRME</button>
         </form>
     </div>
 
     <main id="contenedor-productos">
-
     </main>
+    <div class="productos"></div>
+    
 
     <section class="modal-contenedor">
         <div class="modal-carrito">
             <h3>Carrito</h3>
             <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
-            <div id="carrito-contenedor">
-                
+            <div id="carrito-contenedor">  
             </div>
             <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
             <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
         </div>
     </section>
+
+    
+
+
+ <div class="formulario-container"> 
+    <form onsubmit="event.preventDefault(); validateForm()" id="myForm"> 
+        <div class="contact-box">
+            <div class="left"></div>
+                <div class="right">
+                    
+                        <h4>CONTACTANOS</h4>
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" placeholder="">
+                        <small class="error"></small>
+
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" placeholder="">
+                        <small class="error"></small>
+
+                        <label for="message">Dejanos Tu Consulta</label>			
+                        <textarea id="message" placeholder=" "></textarea>
+                        <small class="error"></small>
+
+                        <div class="center"> 
+                        <input type="submit" value="Enviar Mensaje">
+                        <p id = "success"></p>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+	
+
+
+    
 </body>
 </html>

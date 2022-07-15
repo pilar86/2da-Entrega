@@ -23,11 +23,16 @@ form.addEventListener("submit", e=>{
     if(enviar){
         parrafo.innerHTML = warnings
     }else{
-        parrafo.innerHTML = "Enviado"
+        Swal.fire({
+            title: 'Mensaje enviado!',
+            text: 'Revise su casilla de correo',
+            icon:'success',
+            timer:5000
+         });
     }
 })
 
-    
+
 
 /*
 function envio(){

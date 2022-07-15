@@ -411,6 +411,14 @@ textarea::-webkit-scrollbar-thumb {
     color: #a50808;
     padding-top: 20px;
 }
+.warnings1{
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+    text-align: center;
+    margin: auto;
+    color: #a50808;
+    padding-top: 20px;
+}
 
 
 @media screen and (max-width: 880px){

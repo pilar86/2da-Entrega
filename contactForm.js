@@ -1,51 +1,45 @@
-
-const nameInput = document.querySelector("#name");
-const email = document.querySelector("#email");
-const message = document.querySelector("#message");
-const errorNodes = document.querySelectorAll(".error");
-const btn_enviar = document.querySelector("#btn-enviar")
-
+const nombre = document.getElementById("name")
+const email = document.getElementById("email")
+const message = document.getElementById("message")
+const form = document.getElementById("form")
+const parrafo = document.getElementById("warnings")
 
 
-
-let validarForm = () => {
-};
-
-
-
-let limpiar = () => {
-
-    nameInput.value = "";
-    email.value = "";
-    message.value = "";
-};
+form.addEventListener("submit", e=>{
+    e.preventDefault()
+    let warnings = ""
+    let enviar = false
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
+    parrafo.innerHTML = ""
+    
+    if(nombre.value.length <5){
+        warnings += `El nombre no es valido <br>`
+        enviar = true
+    }
+    if(!regexEmail.test(email.value)){
+        warnings += `El email no es valido <br>`
+        enviar = true
+    }
+    if(enviar){
+        parrafo.innerHTML = warnings
+    }else{
+        parrafo.innerHTML = "Enviado"
+    }
+})
 
     
 
-let obtener_datos = () => {
-    
-    let error = validar();
+/*
+function envio(){
 
-
-        if (error) {
-                Swal.fire({
-                    title:'Consulta NO enviada!',
-                    text: 'Verifique todos los campos',
-                    icon: 'warning'
-                });
-
-        } else {
-
-                Swal.fire({
-                    title: 'Mensaje enviado!',
-                    text: 'Revise su casilla de correo',
-                    icon:'success'
-                 });
-        }
+    Swal.fire({
+        title: 'Mensaje enviado!',
+        text: 'Revise su casilla de correo',
+        icon:'success'
+     });
 }
 
-
-btn_enviar.addEventListener('click', obtener_datos);
+/*btn_enviar.addEventListener('click', obtener_datos);
 
 
 

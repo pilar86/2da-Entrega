@@ -18,3 +18,4 @@ formulario.addEventListener('submit', function(e){
     
     imageAlt: 'Custom image',
   })
+*/

@@ -23,14 +23,16 @@ header {
     padding: 20px 10%;
     box-shadow: 0px 5px 4px 3px rgba(73, 66, 51, 0.3);
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 h1 {
+    min-width: 50px;
     margin-top: 30px; 
     margin-bottom: 50px;
     color: #000000 ;
     font-family: 'Poiret One', cursive;
-    font-size: 85px;
+    font-size: 80px;
     font-weight: lighter;
     letter-spacing: 10px;
     text-align: center;
@@ -82,30 +84,64 @@ p {
     text-align: center;
 }
 
+.newsletter{
+    background-color: rgba(216, 211, 205, 0.425);
+    max-width: 1500px;
+    width:100%;
+    margin: 8vh auto 10vh auto;
+    position: relative;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    border-radius: 10px;
+}
 
-form{
-    margin-top:30px;
-
+.news-form{
+    display: flex;
+    margin-top:50px;
     height: 40px;
+    width:60%;
     border-radius: 25px;
-    border-color: none;
-    font-family: 'Poiret One', cursive;
-    font-size:25px;
+    
+    align-items: center;
+    justify-content:center;
+    
     text-align: center;
-    text-align: center;
+}
+    @media screen and (max-width: 880px){
+        .news-form{
+            grid-template-columns: 1fr;
+        }
+       
 }
 
 input#email-form{
     margin-top:30px;
-    height: 40px;
-    border-radius: 25px;
+    height: 50px;
+    width: 60%;
+    border-radius: 10px;
     border-color: none;
+    background-color: #c7bdb87e;
     font-family: 'Poiret One', cursive;
     font-size:25px;
     text-align: center;
 }
 
-
+.news-button{
+    margin-top:30px;
+    padding: 15px;
+    width:90%;
+    max-width:250px;
+    color:#1f1d1d;
+    background-color: #c7bdb87e;
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+    letter-spacing:2px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
 
 
 #boton-carrito {
@@ -259,9 +295,9 @@ input#email-form{
 
 
 
-.formulario-container {
-    max-width: 850px;
-    width:90%;
+.form {
+    max-width: 1000px;
+    width:100%;
     margin: 8vh auto 10vh auto;
     position: relative;
     display: flex;
@@ -270,21 +306,21 @@ input#email-form{
     padding:20px;
 }
 
-.formulario-container:after{
+.form:after{
     content:'';
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 95%;
     background:url("./img/img-form.jpg") no-repeat center;
     background-size: cover;
     z-index: -1;
-    filter: blur(50px);
+
 }
 
 .contact-box {
-    max-width: 850px;
-    width:90%;
+    max-width: 1000px;
+    width:100%;
     background-color: rgba(196, 184, 171, 0.425);
     margin: 17vh auto 0 auto;
     display: grid;
@@ -333,7 +369,7 @@ input, textarea {
 
 
 input[type="text"]:focus, textarea:focus {
-    border-bottom: 1px solid rgb(158, 130, 94);
+    border-bottom: 1px solid rgb(54, 52, 48);
 }
 
 
@@ -350,29 +386,33 @@ textarea::-webkit-scrollbar-thumb {
     text-align: center;
 }
 
-input[type="submit"] {
+
+.form-button {
     margin-top:30px;
+    padding: 15px;
     width:90%;
     max-width:250px;
-    color:#7c6251;
-    background-color: #c4b09f;
+    color:#3f3837;
+    background-color: #e7d5ccc7;
+    font-family: 'Poiret One', cursive;
     font-size: 20px;
     letter-spacing:2px;
+    border: none;
     cursor: pointer;
     border-radius: 4px;
+
 }
 
-.error {
-    color: rgb(167, 1, 1);
+.warnings{
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+    text-align: center;
+    margin: auto;
+    color: #a50808;
+    padding-top: 20px;
 }
 
-.error-border {
-    border-bottom: 1px solid rgb(204, 0, 0);
-}
 
-#success {
-    color: rgb(60, 139, 60)
-}
 @media screen and (max-width: 880px){
 	.contact-box{
 		grid-template-columns: 1fr;

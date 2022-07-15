@@ -2,51 +2,74 @@
 const nameInput = document.querySelector("#name");
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
-const success = document.querySelector("#success");
 const errorNodes = document.querySelectorAll(".error");
+const btn_enviar = document.querySelector("#btn-enviar")
 
 
 
 
-function validateForm(){
+let validarForm = () => {
+};
 
-    clearMessages();
-    let errorFlag = false;
 
-        if(nameInput.value.length < 1) {
-            errorNodes[0].innerText = "Debes completar este espacio";
-            nameInput.classList.add("error-border");
-            errorFlag = true;
-        }
 
-        if(!emailIsValid(email.value)) {
-            errorNodes[1].innerText = "dirección no válida";
-            email.classList.add("error-border");
-            errorFlag = true;
-        }
+let limpiar = () => {
 
-        if(message.value.length < 1) {
-            errorNodes[2].innerText = "Dejanos tu consulta";
-            message.classList.add("error-border");
-            errorFlag = true;
-        }
+    nameInput.value = "";
+    email.value = "";
+    message.value = "";
+};
 
-        if(!errorFlag) {
-            success.innerText = "envio exitoso!";
+    
+
+let obtener_datos = () => {
+    
+    let error = validar();
+
+
+        if (error) {
+                Swal.fire({
+                    title:'Consulta NO enviada!',
+                    text: 'Verifique todos los campos',
+                    icon: 'warning'
+                });
+
+        } else {
+
+                Swal.fire({
+                    title: 'Mensaje enviado!',
+                    text: 'Revise su casilla de correo',
+                    icon:'success'
+                 });
         }
 }
 
-function clearMessages(){
-    for(let i = 0; i < errorNodes.length; i++){
-        errorNodes[i].innerText = "";
+
+btn_enviar.addEventListener('click', obtener_datos);
+
+
+
+
+/*let obtener_datos = () => {
+    let error_validacion = validar();
+
+    if (!error_validacion) {
+
+
+            swall.fire({
+                title: 'Mensaje enviado!',
+                text: 'Revise su casilla de correo',
+                icon:'success'
+            })
+
+    } else {
+
+            swall.fire({
+                title:'Consulta NO enviada!',
+                text: 'Verifique todos los campos',
+                icon: 'warning'
+            })
+
     }
-    success.innerText = "";
-    nameInput.classList.remove("error-border");
-    email.classList.remove("error-border");
-    message.classList.remove("error-border");
-}
-
-function emailIsValid(email){
-    let pattern = /\S+@\S+\.\S/;
-    return pattern.test(email);
-}
+};
+*/

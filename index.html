@@ -15,8 +15,10 @@
    
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
    
-    <script src="script.js"></script>
-    <script defer src="contactForm.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+    <script defer src="script.js"></script>
+    <script defer src="form.js"></script>
     <script defer src="newsletter.js"></script>
     <script defer src="stock.js"></script>
     <script defer src="modals.js"></script>
@@ -31,13 +33,19 @@
     </header>
 
     <div class="newsletter">
+
         <h2>SUSCRIBITE PARA SABER SOBRE NUEVOS INGRESOS Y DESCUENTOS</h2>
         <h4>NO TE PIERDAS LAS TENDENCIAS SOBRE MOBILIARIO Y DECORACIÓN!!!</h4>
-        <form action="" id="form">
-            <input type="email" id="email-form" placeholder="Ingresa tu email">
-            <button type= "button" id="submit"  class=" btn btn-primary">SUSCRIBIRME</button>
+        
+        <form action="" id="news-form">
+             
+            <input type="text" email="" id="email-form" placeholder="Ingresa tu email"><span class="barra"></span> <br>
+            <button type="submit" class="news-button">Enviar</button>
         </form>
+
     </div>
+
+
 
     <main id="contenedor-productos">
     </main>
@@ -58,35 +66,42 @@
     
 
 
- <div class="formulario-container"> 
-    <form onsubmit="event.preventDefault(); validateForm()" id="myForm"> 
-        <div class="contact-box">
-            <div class="left"></div>
-                <div class="right">
-                    
+    <form action="" id="form">
+        <div class="form">
+            <div class="contact-box">
+                
+
+                <div class="left"></div>
+                
+
+                    <div class="right">
+
+                            
                         <h4>CONTACTANOS</h4>
-                        <label for="name">Nombre</label>
-                        <input type="text" id="name" placeholder="">
-                        <small class="error"></small>
 
-                        <label for="email">Email:</label>
-                        <input type="text" id="email" placeholder="">
-                        <small class="error"></small>
+                            <div class="grupo">
+                                <label for="" >Nombre</label>
+                                <input type="text" name="" id="name"><span class="barra"></span>                           
+                            </div>
 
-                        <label for="message">Dejanos Tu Consulta</label>			
-                        <textarea id="message" placeholder=" "></textarea>
-                        <small class="error"></small>
+                            <div class="grupo">
+                                <label for="" >Email</label>
+                                <input type="text" email="" id="email"><span class="barra"></span>
+                            </div>
 
-                        <div class="center"> 
-                        <input type="submit" value="Enviar Mensaje">
-                        <p id = "success"></p>
-                        </div>
-                    
+                            <div class="grupo">
+                                <label for="message">Dejanos Tu Consulta</label>			
+                                <textarea id="message" required placeholder=" "></textarea>
+                            </div>
+                            
+                        <button type="submit" class="form-button">Enviar</button>
+                        <p class="warnings" id="warnings"></p>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </form>
-</div>
+    </form>      
 	
 
 

@@ -18,13 +18,16 @@
 
     <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script src="jquery/jquery-3.3.1.min.js"></script>
-    <script defer src="script.js"></script>
+    <!--<script defer src="jquery/jquery-3.3.1.min.js"></script>-->
+    
     <script defer src="contactForm.js"></script>
-    <script defer src="newsletter.js"></script>
+    <script defer src="contenidoFeth.js"></script>
+    <script defer src="variablesFetch.js"></script>
+    <script defer src="productosFetch.js"></script>
+    
     <script defer src="stock.js"></script>
     <script defer src="modals.js"></script>
-    <script defer src="app.js"></script>
+    <script defer src="carrito.js"></script>
 </head>
 <body>
     <header>
@@ -39,21 +42,25 @@
         <h2>SUSCRIBITE PARA SABER SOBRE NUEVOS INGRESOS Y DESCUENTOS</h2>
         <h4>NO TE PIERDAS LAS TENDENCIAS SOBRE MOBILIARIO Y DECORACIÓN!!!</h4>
         
-        <form action="" id="newsform">
+        <form action=""  id="news-form">
              
             <input type="text" email="" id="email-form" placeholder="Ingresa tu email"><span class="barra"></span> <br>
-            <button type="submit" class="news-button">Suscribite</button>
+            <button type="submit-btn" class="news-button">Suscribite</button>
         </form>
 
     </div>
 
 
-
+    <!--CARDS CON LOS PRODUCTOS-->
     <main id="contenedor-productos">
     </main>
-    <div class="productos"></div>
-    
 
+    <!--CONTENIDO DESDE LA API
+    <div id="productos-fetch" class="row center"></div>
+    -->
+
+    
+    <!--VENTANA DEL CARRITO DE COMPRAS-->
     <section class="modal-contenedor">
         <div class="modal-carrito">
             <h3>Carrito</h3>
@@ -67,7 +74,7 @@
 
     
 
-
+    <!--FORMULARIO DE CONTACTO/NEWSLETTER-->
     <form action="" method="POST" id="form">
         <div class="form">
             <div class="contact-box">

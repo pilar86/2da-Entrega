@@ -14,7 +14,7 @@ let stockProductos = [
    
     {id: 11, nombre: "MESA BLACK", cantidad: 1, precio: 36000, img: './img/BoC-MArrime1.jpg'},
     {id: 12, nombre: "MESA GREY", cantidad: 1, precio: 36000, img: './img/BoC-MCentro2.jpg'},
-    {id: 13, nombre: "SOFA MARFIL", cantidad: 1, precio: 36000, img: './img/BoC-MCentro1.jpg'},
+    {id: 13, nombre: "MESA MARFIL", cantidad: 1, precio: 36000, img: './img/BoC-MCentro1.jpg'},
 
     {id: 14, nombre: "MESA GRANADA", cantidad: 1, precio: 36000, img: './img/BoC-DT1-granada.jpg'},
     {id: 15, nombre: "MESA MADRID", cantidad: 1, precio: 36000, img: './img/BoC-DT2.jpg'},
